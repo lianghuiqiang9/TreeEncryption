@@ -242,11 +242,11 @@ pub(crate) fn eval_x_k_in_memory<C>(out: &mut Polynomial<Vec<Scalar>>, poly: &Po
 pub fn parse_csv(path: &Path) -> Vec<Vec<usize>> {
     let x_test_f = fs::File::open(path).expect("csv file not found, consider using --artificial");
     let mut x_test: Vec<Vec<usize>> = vec![];
-    let mut x_train_rdr = csv::Reader::from_reader(x_test_f);//逐行读取，然后res为某一行。
+    let mut x_train_rdr = csv::Reader::from_reader(x_test_f);
     for res in x_train_rdr.records() {
-        let record = res.unwrap();//读取当前行的内容，并将其存储在 record 中。unwrap() 用于处理可能的错误。
+        let record = res.unwrap();
         let row = record.iter().map(|s| {
-            s.parse().unwrap()//将字符串变为usize
+            s.parse().unwrap()
         }).collect();
         x_test.push(row);
     }

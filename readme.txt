@@ -7,5 +7,5 @@ cargo build --release
 Building [=======================>   ] 73/79: concrete-fftw-sys(build) time is very long.
 
 # Acknowledge
-# Thanks the https://github.com/KULeuven-COSIC/SortingHat.git
-# We use some function in their program.
+# Thanks the https://github.com/KULeuven-COSIC/SortingHat.git 
+# We use some function of rgsw and rlwe in their program.

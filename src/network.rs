@@ -596,7 +596,7 @@ pub fn cipher_network(){
         println!("client_f");
         let result = cipher_network_evaluate(  & cipher_network,
                                                                     & mut cipher_network_control_bit_matrix,
-                                                       & x_test_input[line],
+                                                                    & x_test_input[line],
                                                                     & neg_sk_ct,
                                                                     & ksk_map,
                                                                     & ctx_client,
