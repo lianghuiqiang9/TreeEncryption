@@ -1,0 +1,33 @@
+[
+[
+    {"threshold": 1944, "feature": 8, "leaf": 0, "node_type": 1, "child_vec":[0,0,0,0]}
+],
+[
+    {"threshold": 1954, "feature": 10, "leaf": 1, "node_type": 1, "child_vec":[0,0,0,0]},
+    {"threshold": 1746, "feature": 7, "leaf": 2, "node_type": 1, "child_vec":[0,0,0,0]}
+],
+[
+    {"threshold": 1633, "feature": 4, "leaf": 3, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 1345, "feature": 6, "leaf": 4, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 1564, "feature": 2, "leaf": 5, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 456, "feature": 1, "leaf": 6, "node_type": 0, "child_vec":[0,1,0,1]}
+],
+[
+    {"threshold": 345, "feature": 9, "leaf": 7, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1890, "feature": 3, "leaf": 8, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 1457, "feature": 4, "leaf": 9, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 1778, "feature": 1, "leaf": 10, "node_type": 1, "child_vec":[0,1,0,1]}
+],
+[
+    {"threshold": 1647, "feature": 2, "leaf": 11, "node_type": 1, "child_vec":[0,1,0,1]},
+    {"threshold": 1786, "feature": 7, "leaf": 12, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1986, "feature": 9, "leaf": 13, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1983, "feature": 3, "leaf": 14, "node_type": 1, "child_vec":[0,1,0,1]}
+],
+[
+    {"threshold": 1876, "feature": 4, "leaf": 15, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1354, "feature": 3, "leaf": 16, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1657, "feature": 9, "leaf": 17, "node_type": 0, "child_vec":[0,1,0,1]},
+    {"threshold": 1876, "feature": 2, "leaf": 18, "node_type": 0, "child_vec":[0,1,0,1]}
+]
+]

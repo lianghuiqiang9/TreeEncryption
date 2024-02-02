@@ -1,0 +1,39 @@
+[
+[
+    {"threshold":1334,"feature":6,"leaf":0,"node_type":1,"child_vec":[0,1,0,1]}
+],
+[
+    {"threshold":51,"feature":7,"leaf":1,"node_type":1,"child_vec":[0,1,0,1]},
+    {"threshold":796,"feature":0,"leaf":0,"node_type":1,"child_vec":[0,1,0,1]}
+],
+[
+    {"threshold":108,"feature":6,"leaf":1,"node_type":0,"child_vec":[0,1,0,1]},
+    {"threshold":1435,"feature":5,"leaf":0,"node_type":1,"child_vec":[1,0,1,0]},
+    {"threshold":761,"feature":6,"leaf":1,"node_type":1,"child_vec":[1,0,0,1]},
+    {"threshold":201,"feature":0,"leaf":1,"node_type":0,"child_vec":[1,0,1,0]}
+],
+[
+    {"threshold":456,"feature":1,"leaf":0,"node_type":1,"child_vec":[1,0,0,1]},
+    {"threshold":656,"feature":4,"leaf":0,"node_type":1,"child_vec":[0,1,0,1]},
+    {"threshold":1697,"feature":4,"leaf":0,"node_type":1,"child_vec":[1,0,1,0]},
+    {"threshold":1287,"feature":4,"leaf":0,"node_type":0,"child_vec":[0,1,1,0]}
+],
+[
+    {"threshold":707,"feature":3,"leaf":1,"node_type":0,"child_vec":[1,0,0,1]},
+    {"threshold":418,"feature":0,"leaf":1,"node_type":0,"child_vec":[1,0,1,0]},
+    {"threshold":1566,"feature":6,"leaf":0,"node_type":1,"child_vec":[0,1,0,1]},
+    {"threshold":1482,"feature":9,"leaf":1,"node_type":0,"child_vec":[0,1,0,1]}
+],
+[
+    {"threshold":327,"feature":4,"leaf":0,"node_type":0,"child_vec":[0,1,0,1]},
+    {"threshold":1475,"feature":5,"leaf":1,"node_type":0,"child_vec":[1,0,0,1]},
+    {"threshold":361,"feature":9,"leaf":0,"node_type":0,"child_vec":[0,1,0,1]},
+    {"threshold":431,"feature":1,"leaf":0,"node_type":1,"child_vec":[1,0,1,0]}
+],
+[
+    {"threshold":1668,"feature":7,"leaf":0,"node_type":1,"child_vec":[0,1,1,0]},
+    {"threshold":1163,"feature":2,"leaf":0,"node_type":0,"child_vec":[1,0,1,0]},
+    {"threshold":1378,"feature":6,"leaf":1,"node_type":1,"child_vec":[0,1,0,1]},
+    {"threshold":1263,"feature":2,"leaf":0,"node_type":0,"child_vec":[1,0,0,1]}
+]
+]

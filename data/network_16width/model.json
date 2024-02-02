@@ -1,0 +1,79 @@
+[
+[
+    {"threshold":1392,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0]}
+],
+[
+    {"threshold":1839,"feature":0,"leaf":0,"node_type":1,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]},
+    {"threshold":858,"feature":9,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0]}
+],
+[
+    {"threshold":1622,"feature":0,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1]},
+    {"threshold":379,"feature":7,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0]},
+    {"threshold":1777,"feature":3,"leaf":1,"node_type":1,"child_vec":[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":481,"feature":9,"leaf":1,"node_type":1,"child_vec":[1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0]}
+],
+[
+    {"threshold":1280,"feature":9,"leaf":1,"node_type":1,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":148,"feature":1,"leaf":1,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0]},
+    {"threshold":76,"feature":3,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":974,"feature":9,"leaf":0,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":99,"feature":8,"leaf":1,"node_type":1,"child_vec":[0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":19,"feature":9,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0]},
+    {"threshold":357,"feature":0,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1]},
+    {"threshold":1397,"feature":1,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0]}
+],
+[
+    {"threshold":1261,"feature":0,"leaf":0,"node_type":0,"child_vec":[0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":292,"feature":6,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":593,"feature":2,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0]},
+    {"threshold":31,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0]},
+    {"threshold":582,"feature":6,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":1856,"feature":4,"leaf":0,"node_type":1,"child_vec":[0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":542,"feature":9,"leaf":1,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":476,"feature":7,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0]},
+    {"threshold":193,"feature":1,"leaf":1,"node_type":0,"child_vec":[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1]},
+    {"threshold":48,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":608,"feature":0,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0]},
+    {"threshold":1522,"feature":6,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0]},
+    {"threshold":1008,"feature":4,"leaf":0,"node_type":1,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":2035,"feature":6,"leaf":0,"node_type":0,"child_vec":[0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":824,"feature":1,"leaf":1,"node_type":0,"child_vec":[0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":1837,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0]}
+],
+[
+    {"threshold":1255,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0]},
+    {"threshold":1982,"feature":0,"leaf":1,"node_type":1,"child_vec":[1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0]},
+    {"threshold":1509,"feature":9,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]},
+    {"threshold":1962,"feature":1,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":1432,"feature":3,"leaf":0,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":963,"feature":8,"leaf":1,"node_type":1,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0]},
+    {"threshold":1427,"feature":5,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":779,"feature":6,"leaf":0,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":680,"feature":1,"leaf":1,"node_type":0,"child_vec":[0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0]},
+    {"threshold":1463,"feature":3,"leaf":1,"node_type":1,"child_vec":[0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":1112,"feature":1,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0]},
+    {"threshold":1972,"feature":7,"leaf":1,"node_type":0,"child_vec":[0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0]},
+    {"threshold":1160,"feature":0,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0]},
+    {"threshold":326,"feature":4,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0]},
+    {"threshold":1811,"feature":5,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":551,"feature":4,"leaf":1,"node_type":0,"child_vec":[0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0]}
+],
+[
+    {"threshold":1762,"feature":5,"leaf":1,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":1840,"feature":4,"leaf":1,"node_type":1,"child_vec":[0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":575,"feature":4,"leaf":1,"node_type":0,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0]},
+    {"threshold":1864,"feature":3,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]},
+    {"threshold":891,"feature":4,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0]},
+    {"threshold":190,"feature":7,"leaf":0,"node_type":0,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0]},
+    {"threshold":805,"feature":4,"leaf":0,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]},
+    {"threshold":782,"feature":2,"leaf":1,"node_type":0,"child_vec":[0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0]},
+    {"threshold":781,"feature":3,"leaf":1,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]},
+    {"threshold":877,"feature":8,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0]},
+    {"threshold":601,"feature":0,"leaf":1,"node_type":0,"child_vec":[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1]},
+    {"threshold":1127,"feature":4,"leaf":0,"node_type":0,"child_vec":[1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":635,"feature":1,"leaf":1,"node_type":0,"child_vec":[0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0]},
+    {"threshold":2030,"feature":6,"leaf":0,"node_type":1,"child_vec":[0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0]},
+    {"threshold":775,"feature":2,"leaf":1,"node_type":1,"child_vec":[0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0]},
+    {"threshold":1668,"feature":1,"leaf":0,"node_type":0,"child_vec":[0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0]}
+]
+]
