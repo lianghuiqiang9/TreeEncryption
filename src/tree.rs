@@ -210,8 +210,8 @@ fn eval_node(out: &mut usize, node: &Node, features: &Vec<usize>, b: usize) {
         }
         Node::Internal(node) => {
             match node.op {
-                Op::LEQ => { //features[node.feature] <= node.threshold
-                    if features[node.feature] >= node.threshold {//修改
+                Op::LEQ => {
+                    if features[node.feature] >= node.threshold {
                         eval_node(out, &node.right, features, b);
                         eval_node(out, &node.left, features, b * (1 - b));
                     } else {
@@ -271,7 +271,6 @@ pub fn compare_expand<'a>(flat_cipher_nodes: &'a Vec<CipherInternal>,
             }
         expand_fourier(&cts_out, ksk_map, neg_sk_ct, ctx, buffers)
     }) 
-
 }
 
 #[derive(Debug,Clone)] 
