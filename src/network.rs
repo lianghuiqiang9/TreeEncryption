@@ -519,11 +519,11 @@ pub fn cipher_network_evaluate(cipher_network: & Vec<Vec<Box<CipherNode>>>,
 }
 
 
-pub fn cipher_network(){
+pub fn cipher_network(dir_data:String,input_size:usize){
     let setup_instant_global = Instant::now(); 
     println!("******************************* step 1: server begin *******************************");
     let setup_instant = Instant::now();
-    let dir_tree: &str = "./data/network_8width";
+    let dir_tree = dir_data;
     let base_path_tree = Path::new(& dir_tree);
     let model_path = base_path_tree.join("model.json");
     let model_path = fs::File::open(model_path).unwrap();
@@ -573,7 +573,7 @@ pub fn cipher_network(){
     println!("client load private data");
     let setup_instant = Instant::now();
     let dir_data = dir_tree;
-    let input_size = 10;
+    //let input_size = 10;
     let base_path = Path::new(& dir_data);
     let x_test_path = base_path.join("x_test.csv");
     let x_test = parse_csv(&x_test_path);

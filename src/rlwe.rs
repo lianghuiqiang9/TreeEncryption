@@ -25,7 +25,7 @@ SOFTWARE.
 */
 
 use std::collections::HashMap;
-use std::time::Instant;
+//use std::time::Instant;
 use concrete_commons::dispersion::DispersionParameter;
 use concrete_commons::key_kinds::BinaryKeyKind;
 use concrete_commons::parameters::{DecompositionBaseLog, DecompositionLevelCount, GlweDimension, GlweSize, PlaintextCount, PolynomialSize};
