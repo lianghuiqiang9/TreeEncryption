@@ -1,5 +1,31 @@
+
+/*
+MIT License
+
+Copyright (c) 2022 KU Leuven - COSIC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
 use std::collections::HashMap;
-use std::time::Instant;
+//use std::time::Instant;
 use concrete_commons::dispersion::DispersionParameter;
 use concrete_commons::key_kinds::BinaryKeyKind;
 use concrete_commons::parameters::{DecompositionBaseLog, DecompositionLevelCount, GlweDimension, GlweSize, PlaintextCount, PolynomialSize};
@@ -18,7 +44,7 @@ use concrete_core::backends::core::private::math::fft::AlignedVec;
 use num_traits::identities::{One, Zero};
 use crate::*;
 use crate::rgsw::RGSWCiphertext;
-//use serde::{Deserialize, Serialize};//Serialize, Deserialize
+
 #[derive(Debug, Clone)]
 /// An RLWE ciphertext.
 /// It is a wrapper around `GlweCiphertext` from concrete.
@@ -160,25 +186,19 @@ impl RLWECiphertext {
             let k = n / (1 << (i - 1)) + 1;
             let ksk = ksk_map.get(&k).unwrap();
             assert_eq!(ksk.get_subs_k(), k);
-            //let setup_test = Instant::now();
-
             ksk.subs(&mut buf_fourier, &out, buffers);
-            //println!( "subs : {:?} \n", setup_test.elapsed());
-            //let setup_test = Instant::now();
             buffers.fft_buffers.fft.add_backward_as_torus(&mut out.get_mut_mask().as_mut_polynomial_list().get_mut_polynomial(0), &mut buf_fourier.mask);
             buffers.fft_buffers.fft.add_backward_as_torus(&mut out.get_mut_body().as_mut_polynomial(), &mut buf_fourier.body);
-            //println!( "+ : {:?} \n", setup_test.elapsed());
         }
     }
 
     /// Compare this ciphertext c, which encrypts m on the exponent against a value d
     /// the resulting ciphertext encrypts a polynomial m(X) such that
-    /// error error m0 = 1 if m >= d, otherwise m0 = 0, where m0 is the constant term of m(X).
+    /// m0 = 1 if m >= d, otherwise m0 = 0, where m0 is the constant term of m(X).
     /// Note that encrypting on the exponent means m -> X^m.
     pub fn less_eq_than(&mut self, m: usize, buffers: &mut FourierBuffers<Scalar>) {
-        //let setup_test = Instant::now();
         let n = self.polynomial_size().0;
-        assert!(m < n);//d为t, d==n==2048
+        assert!(m < n);
         let t_poly = {
             let mut t = vec![Scalar::zero(); n];
             t[0] = Scalar::one();
@@ -187,11 +207,10 @@ impl RLWECiphertext {
             }
             Polynomial::from_container(t)
         };
-        //Plain.mult(t,self)
+
         let mut poly_buffer = Polynomial::allocate(Scalar::zero(), self.polynomial_size());
         self.update_body_with_mul_with_buf(&t_poly, &mut poly_buffer, buffers);
         self.update_mask_with_mul_with_buf(&t_poly, &mut poly_buffer, buffers);
-        //println!( "a < = b : less_eq_than time: {:?} \n", setup_test.elapsed());
     }
 
     /// Checks whether this ciphertext c, which encrypts a value m on the exponent
@@ -340,7 +359,6 @@ impl RLWESecretKey {
         for (i, mut m) in out.0.as_mut_glwe_list().ciphertext_iter_mut().enumerate() {
             let level = (i / 2) + 1;
             let shift: usize = (Scalar::BITS as usize) - ctx.base_log.0 * level;
-            //println!("i = {}, level = {}, shift = {}",i,level,shift);
             buf.as_mut_tensor().fill_with_copy(encoded.as_tensor());
             mul_const(&mut buf.as_mut_tensor(), 1 << shift);
             if i % 2 == 0 {
@@ -377,9 +395,9 @@ impl RLWESecretKey {
         };
         let mut neg_sk_ct = RGSWCiphertext::allocate(ctx.poly_size, ctx.negs_base_log, ctx.negs_level_count);
         
-        let setup_test = Instant::now();
+        //let setup_test = Instant::now();
         self.encrypt_rgsw(&mut neg_sk_ct, &neg_sk, ctx);
-        println!("encrypt_rgsw time : {:?}", setup_test.elapsed());
+        //println!("encrypt_rgsw time : {:?}", setup_test.elapsed());
         neg_sk_ct
     }
 }
@@ -732,15 +750,10 @@ pub fn expand_fourier(cs: &Vec<RLWECiphertext>, ksk_map: &HashMap<usize, Fourier
     let mut out = RGSWCiphertext::allocate(ctx.poly_size, ctx.base_log, ctx.level_count);
     let mut c_prime = RLWECiphertext::allocate(ctx.poly_size);
     for (i, mut c) in out.0.as_mut_glwe_list().ciphertext_iter_mut().enumerate() {
-        
         let k = i / 2;
-
-        //println!("i = {}, k = {}",i,k);
         if i % 2 == 0 {
             cs[k].trace1_fourier(&mut c_prime, ksk_map, buffers);
-            //let setup_test = Instant::now();
-            neg_s.external_product_with_buf_glwe(&mut c, &c_prime, buffers);//RLWE(b_0/ B^k)
-            //println!( "external_product : {:?} \n", setup_test.elapsed());
+            neg_s.external_product_with_buf_glwe(&mut c, &c_prime, buffers);
         } else {
             c.as_mut_tensor().fill_with_copy(c_prime.0.as_tensor());
         }
@@ -1288,7 +1301,7 @@ mod test {
     fn test_fourier_mul() {
         let mut ctx = Context::default();
         let n = ctx.poly_size;
-        let mut buffers = FourierBuffers::new(ctx.poly_size, GlweSize(2));//不用管那么多了，就这样输入就行了。要什么自行车呀。
+        let mut buffers = FourierBuffers::new(ctx.poly_size, GlweSize(2));
         let mut out_fourier = Polynomial::allocate(Scalar::zero(), n);
         let mut out_naive = Polynomial::allocate(Scalar::zero(), n);
 

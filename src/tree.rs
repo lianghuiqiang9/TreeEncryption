@@ -210,8 +210,8 @@ fn eval_node(out: &mut usize, node: &Node, features: &Vec<usize>, b: usize) {
         }
         Node::Internal(node) => {
             match node.op {
-                Op::LEQ => { //features[node.feature] <= node.threshold
-                    if features[node.feature] >= node.threshold {//修改
+                Op::LEQ => {
+                    if features[node.feature] >= node.threshold {
                         eval_node(out, &node.right, features, b);
                         eval_node(out, &node.left, features, b * (1 - b));
                     } else {
@@ -271,7 +271,6 @@ pub fn compare_expand<'a>(flat_cipher_nodes: &'a Vec<CipherInternal>,
             }
         expand_fourier(&cts_out, ksk_map, neg_sk_ct, ctx, buffers)
     }) 
-
 }
 
 #[derive(Debug,Clone)] 
@@ -589,12 +588,13 @@ pub fn decrypt_and_recompose(sk: &RLWESecretKey, cts: &Vec<RLWECiphertext>, ctx:
 }
 
 
-pub fn cipher_tree(){
+pub fn cipher_tree(dir_data:String,input_size:usize){
+
     let setup_instant_global = Instant::now(); 
     println!("******************************* step 1: server begin *******************************");
     
     let setup_instant = Instant::now();
-    let dir_tree="./data/heart_11bits";
+    let dir_tree = dir_data;
     let base_path_tree = Path::new(& dir_tree);
     let model_path = base_path_tree.join("model.json");
     let model_f = fs::File::open(model_path).unwrap();
@@ -639,9 +639,9 @@ pub fn cipher_tree(){
 
     println!("client load private data");
 
-    let dir_data = dir_tree;
-    let input_size = 10;
-    let base_path = Path::new(& dir_data);
+    //let dir_data = dir_tree;
+    //let input_size = 10;
+    let base_path = Path::new(& dir_tree);
     let x_test_path = base_path.join("x_test.csv");
     let x_test = parse_csv(&x_test_path);
     println!("client print data");
